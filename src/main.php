@@ -5,7 +5,6 @@ function bracketStringAsessment(string $bracketExpression):bool
     $openingBracketString="([<{";
     foreach (str_split($bracketExpression) as $char)
     {
-//        var_dump($char);
     if(str_contains($openingBracketString, $char))
     {
     $stack[] = $char;
@@ -32,7 +31,7 @@ function bracketStringAsessment(string $bracketExpression):bool
                 }
                 else
                 {
-                    echo("ams");
+                    return false;
                 }
                break;
             case("}"):
